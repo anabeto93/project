@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1'], function() {
     Route::post('login', AuthenticateController::class)->name('api.login');
-    Route::post('logout', LogoutApiSessionController::class)->name('api.logout');
+    Route::post('logout', LogoutApiSessionController::class)->name('api.logout')->middleware('auth:sanctum');
 });

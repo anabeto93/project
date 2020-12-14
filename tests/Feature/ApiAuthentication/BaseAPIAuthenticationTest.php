@@ -38,4 +38,18 @@ class BaseAPIAuthenticationTest extends TestCase
             'password' => Hash::make($this->validPassword),
         ]);
     }
+
+    protected function authenticateUser(array $params=[])
+    {
+        $default = [
+            'email' => $this->validEmail,
+            'password' => $this->validPassword,
+        ];
+
+        $credentials = array_merge($default, $params);
+
+        $response = $this->postJson($this->loginRoute, $credentials);
+
+        return $response->json('data.token');
+    }
 }

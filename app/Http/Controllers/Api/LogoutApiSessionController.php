@@ -11,10 +11,15 @@ class LogoutApiSessionController extends Controller
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function __invoke(Request $request)
     {
-        //
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'status' => 'Success',
+            'reason' => 'Session token revoked.',
+        ], 200);
     }
 }
