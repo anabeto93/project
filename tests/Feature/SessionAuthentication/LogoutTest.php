@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Tests\Feature\ApiAuthentication;
+namespace Tests\Feature\SessionAuthentication;
 
 
 use App\Models\User;

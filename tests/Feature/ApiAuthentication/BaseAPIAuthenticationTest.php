@@ -1,0 +1,41 @@
+<?php
+
+
+namespace Tests\Feature\ApiAuthentication;
+
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
+use Tests\TestCase;
+
+class BaseAPIAuthenticationTest extends TestCase
+{
+    use RefreshDatabase;
+
+    protected $invalidEmail = 'invalid@freshinup.com';
+
+    protected $invalidPassword = 'invalid';
+
+    protected $validEmail = 'john@freshinup.com';
+
+    protected $validPassword = 'password';
+
+    protected $loginRoute;
+
+    protected $logoutRoute;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->loginRoute = route('api.login');
+        $this->logoutRoute = route('api.logout');
+    }
+
+    protected function createUser()
+    {
+        return User::factory()->create([
+            'email' => $this->validEmail,
+            'password' => Hash::make($this->validPassword),
+        ]);
+    }
+}

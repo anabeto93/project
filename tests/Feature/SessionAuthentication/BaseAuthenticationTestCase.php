@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\ApiAuthentication;
+namespace Tests\Feature\SessionAuthentication;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
