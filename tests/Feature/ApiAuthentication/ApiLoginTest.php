@@ -46,7 +46,7 @@ class ApiLoginTest extends BaseAPIAuthenticationTest
 
         $response = $this->postJson($this->loginRoute, $credentials);
 
-        $response->assertStatus(400);
+        $response->assertStatus(401);
 
         $response->assertJsonStructure([
             'status', 'reason',
@@ -66,10 +66,10 @@ class ApiLoginTest extends BaseAPIAuthenticationTest
 
         $response = $this->postJson($this->loginRoute, $credentials);
 
-        $response->assertStatus(404);
+        $response->assertStatus(422);
 
         $response->assertJsonStructure([
-            'status', 'reason',
+            'status', 'reason', 'data',
         ]);
     }
 
