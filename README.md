@@ -14,6 +14,11 @@ have a look at the the [PR standard](https://github.com/FreshinUp/fresh-platform
 2. Implement and iterate on component
 Sample: https://github.com/FreshinUp/foodfleet/pull/629/commits/ab4afa991ef5b43f193448030e6439c9931187ea
 
+## Back end
+1. Write tests
+2. Make a WIP PR to validate expectations 
+3. Write implementation
+
 # Development setup
 1. Clone with ssh. To do so you will need to setup your github account to work with ssh
 2. Install yarn version 1.x not 2.x.
@@ -35,3 +40,13 @@ Now you should be able to setup any FreshinUp projects. There should be a README
     *Front end with VueJS*
     *Back end with Laravel*
     *Don't forget to write tests on both ends*
+# Project scope
+- build REST API that allows to read commits
+- consume GitHub API from NodeJS
+> references: https://developer.github.com/v3/
+
+Front end
+![image.png](https://zube.io/files/freshinup/396b3e9aae9a2fe3b3d2393edd820da4-image.png)
+
+Back end
+![image.png](https://zube.io/files/freshinup/2eabe1e25ef28a227d179b095a3d1022-image.png)
