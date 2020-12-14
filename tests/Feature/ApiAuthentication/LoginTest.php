@@ -73,7 +73,7 @@ class LoginTest extends BaseAuthenticationTestCase
         $credentials = array_merge($default_credentials, $params);
 
         $response = $this->postJson($this->loginRoute, $credentials);
-
+//dd(['login_response' => $response->json()]);
         $response->user = $user;
 
         return $response;
