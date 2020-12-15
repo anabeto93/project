@@ -48,3 +48,43 @@ Front end
 
 Back end
 ![image.png](https://zube.io/files/freshinup/2eabe1e25ef28a227d179b095a3d1022-image.png)
+
+## SOLUTION
+To setup this application, follow the instructions as specified under `Development Setup` before proceeding with the next steps.
+
+1. ```bash
+    composer install
+   ```
+2. ```bash 
+   php artisan migrate:refresh --seed
+    ```
+3. ```bash
+   php artisan serve --port=8090
+   ```
+
+**NB: I chose port 8090 because the default 8080 is already occupied on my localhost. Kindly choose what will suit you.**
+
+The credentials to the dashboard will be available in terminal at which point, you can visit http://localhost:8090/login
+
+To see the available APIs, simply run the following command.
+
+```bash
+php artisan route:list
+```
+
+A simpler one will be ```php artisan route:list -c``` 
+
+Test with POSTMAN 
+
+## Testing
+You can either of the following commands to test the application
+
+```bash
+./vendor/bin/phpunit
+```
+
+```bash
+./vendor/bin/pest
+```
+
+I prefer to use `pest`.
