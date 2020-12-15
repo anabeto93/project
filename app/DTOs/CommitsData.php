@@ -20,4 +20,15 @@ class CommitsData
 
         $this->commits = $all;
     }
+
+    public function toArray()
+    {
+        $all = [];
+
+        foreach($this->commits as $i => $commit) {
+            $all[$i] = (array) $commit;
+        }
+
+        return $all;
+    }
 }

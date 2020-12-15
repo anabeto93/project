@@ -12,13 +12,9 @@ class BaseAPIAuthenticationTest extends TestCase
 {
     use RefreshDatabase;
 
-    protected $invalidEmail = 'invalid@freshinup.com';
+    protected string $validEmail = 'john@freshinup.com';
 
-    protected $invalidPassword = 'invalid';
-
-    protected $validEmail = 'john@freshinup.com';
-
-    protected $validPassword = 'password';
+    protected string $validPassword = 'password';
 
     protected $loginRoute;
 

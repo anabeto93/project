@@ -17,7 +17,7 @@ class FakeCommitsAPI implements CommitsAPI
         for($i = 0; $i < 5; ++$i) {
             $fakes[$i] = new SingleCommitData('12935e6770679d2ef0d6cba5496fc759424918d6', 'Fake commit message', 'Test User', 'test@github.com', now()->toIso8601String());
         }
-        
+
         return new CommitsData($fakes);
     }
 
