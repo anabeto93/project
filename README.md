@@ -54,11 +54,16 @@ To setup this application, follow the instructions as specified under `Developme
 
 1. ```bash
     composer install
+2. ```bash
+   cp .env.example .env
+    ```
+  Change the variables to suit your environment.
+  
    ```
-2. ```bash 
+3. ```bash 
    php artisan migrate:refresh --seed
     ```
-3. ```bash
+4. ```bash
    php artisan serve --port=8090
    ```
 
@@ -88,3 +93,5 @@ You can either of the following commands to test the application
 ```
 
 I prefer to use `pest`.
+
+### Worthy of note is the `GITHUB_ACCESS_TOKEN=` environment variable which needs to be set in .env file
