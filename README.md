@@ -1,62 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Technical
+have a look at the the [PR standard](https://github.com/FreshinUp/fresh-platform/blob/master/docs/pull-request-standards.md)
+1. on the PR description you should put 
+> close #issue-number
+2. move the ticket in zube to in progress
+3. PR title should match issue title
+4. PR title should contain "WIP" until it is ready for review and then you can remove it then move the ticket in zube to "in review"
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Front end 
+1. Create storybook
+2. Create test
+2. Implement and iterate on component
+Sample: https://github.com/FreshinUp/foodfleet/pull/629/commits/ab4afa991ef5b43f193448030e6439c9931187ea
 
-## About Laravel
+## Back end
+1. Write tests
+2. Make a WIP PR to validate expectations 
+3. Write implementation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Development setup
+1. Clone with ssh. To do so you will need to setup your github account to work with ssh
+2. Install yarn version 1.x not 2.x.
+3. Install node version 10 (comes with npm version 6)
+4. Install composer 1.x not 2.x since that latest can break some dependencies
+Now you should be able to setup any FreshinUp projects. There should be a README file for each. Try following the instruction on the development setup section.  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Expectations
+- Accuracy in communication
+  * work description
+    * invoicing: Did you ever use Jira or other system where you are entering time daily for your work ?
+    - Efficiency in work item
+    - Understand and being able to extend current code base
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    Test project. This is a simple 20min to 1h project to get a sense of your coding standard and confirm your credentials. The tasks are the following:
+    - Back end: integrate github API to retrieve commit list for a repository (parameter). In other words, build a backend api that is communicating with github and retrieve commit list
+    - Front end: build UI to match screenshot below
 
-## Learning Laravel
+    *Front end with VueJS*
+    *Back end with Laravel*
+    *Don't forget to write tests on both ends*
+# Project scope
+- build REST API that allows to read commits
+- consume GitHub API from NodeJS
+> references: https://developer.github.com/v3/
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Front end
+![image.png](https://zube.io/files/freshinup/396b3e9aae9a2fe3b3d2393edd820da4-image.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Back end
+![image.png](https://zube.io/files/freshinup/2eabe1e25ef28a227d179b095a3d1022-image.png)
